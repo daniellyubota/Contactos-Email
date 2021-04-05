@@ -26,5 +26,10 @@ namespace Contactos_Email
         {
 
         }
+
+        private void cbComerciantes_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
