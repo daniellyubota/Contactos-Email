@@ -33,6 +33,8 @@ namespace Contactos_Email
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbComunicaçaoSocial = new System.Windows.Forms.CheckBox();
             this.cbComerciantes = new System.Windows.Forms.CheckBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -43,10 +45,9 @@ namespace Contactos_Email
             this.checkbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnGerarLista = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnRemover = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -73,6 +74,7 @@ namespace Contactos_Email
             this.btnAdicionar.TabIndex = 1;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // groupBox1
             // 
@@ -90,6 +92,26 @@ namespace Contactos_Email
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(454, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(182, 25);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Comunicação Social";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(127, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Comerciantes";
             // 
             // cbComunicaçaoSocial
             // 
@@ -176,43 +198,34 @@ namespace Contactos_Email
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             // 
-            // button2
+            // btnGerarLista
             // 
-            this.button2.Location = new System.Drawing.Point(26, 586);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(732, 32);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Gerar Lista";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(127, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Comerciantes";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(454, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Comunicação Social";
+            this.btnGerarLista.Location = new System.Drawing.Point(26, 586);
+            this.btnGerarLista.Name = "btnGerarLista";
+            this.btnGerarLista.Size = new System.Drawing.Size(732, 32);
+            this.btnGerarLista.TabIndex = 3;
+            this.btnGerarLista.Text = "Gerar Lista";
+            this.btnGerarLista.UseVisualStyleBackColor = true;
+            this.btnGerarLista.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(266, 28);
+            this.textBox1.Location = new System.Drawing.Point(303, 28);
             this.textBox1.Margin = new System.Windows.Forms.Padding(0);
             this.textBox1.Name = "textBox1";
             this.textBox1.PlaceholderText = "Pesquisar";
             this.textBox1.Size = new System.Drawing.Size(250, 23);
             this.textBox1.TabIndex = 4;
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(159, 22);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(121, 32);
+            this.btnRemover.TabIndex = 5;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.button1_Click);
             // 
             // ContactList
             // 
@@ -220,8 +233,9 @@ namespace Contactos_Email
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(784, 630);
+            this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnGerarLista);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.pictureBox1);
@@ -231,7 +245,7 @@ namespace Contactos_Email
             this.MaximumSize = new System.Drawing.Size(800, 680);
             this.MinimumSize = new System.Drawing.Size(800, 650);
             this.Name = "ContactList";
-            this.Text = "Contact List";
+            this.Text = "Lista de Contatos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -257,11 +271,11 @@ namespace Contactos_Email
         private System.Windows.Forms.DataGridViewCheckBoxColumn checkbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnGerarLista;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnRemover;
     }
 }
 
