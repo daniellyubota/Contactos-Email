@@ -35,9 +35,9 @@ namespace Contactos_Email
             this.gbTipoContato = new System.Windows.Forms.GroupBox();
             this.radioComunicaçaoSocial = new System.Windows.Forms.RadioButton();
             this.radioComerciante = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.gbTipoContato.SuspendLayout();
@@ -48,9 +48,9 @@ namespace Contactos_Email
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.btnAdicionar);
             this.groupBox1.Controls.Add(this.gbTipoContato);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -66,6 +66,7 @@ namespace Contactos_Email
             this.btnAdicionar.TabIndex = 5;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // gbTipoContato
             // 
@@ -100,12 +101,12 @@ namespace Contactos_Email
             this.radioComerciante.Text = "Comerciante";
             this.radioComerciante.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(17, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(288, 23);
-            this.textBox2.TabIndex = 3;
+            this.txtEmail.Location = new System.Drawing.Point(17, 85);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(307, 23);
+            this.txtEmail.TabIndex = 3;
             // 
             // label2
             // 
@@ -116,12 +117,12 @@ namespace Contactos_Email
             this.label2.TabIndex = 2;
             this.label2.Text = "Email";
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtNome.Location = new System.Drawing.Point(17, 34);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(307, 23);
+            this.txtNome.TabIndex = 1;
             // 
             // label1
             // 
@@ -141,10 +142,11 @@ namespace Contactos_Email
             this.ClientSize = new System.Drawing.Size(404, 291);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(420, 330);
             this.MinimumSize = new System.Drawing.Size(420, 330);
             this.Name = "Form2";
-            this.Text = "Adicionar Contato";
+            this.Text = "Adicionar Contacto";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbTipoContato.ResumeLayout(false);
@@ -156,13 +158,13 @@ namespace Contactos_Email
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.GroupBox gbTipoContato;
         private System.Windows.Forms.RadioButton radioComunicaçaoSocial;
         private System.Windows.Forms.RadioButton radioComerciante;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
     }
 }
